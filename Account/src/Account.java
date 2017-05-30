@@ -10,6 +10,7 @@ public class Account {
 		return 1;
 	}
 	
+	// add money at balance
 	public void credit(double money){
 		balance+=money;
 	}

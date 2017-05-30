@@ -16,6 +16,7 @@ public class SoftwareST {
 	
 	public SoftwareST(){}
 	
+	
 	public SoftwareST(String name, String goddness1, String name2, String goddness2){
 		pointer=name;
 		nickname=goddness1;
