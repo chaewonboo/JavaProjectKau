@@ -31,6 +31,7 @@ public class NovelTest {
 		
 		//해쉬맵이란것을 이용해 미연시 대화를 이어갈수 있게 만든다
 		//링크더리스트는 불가 ㅜㅜ 
+		//git check
 		
 		if(choicePL==1){	
 			while(true){
