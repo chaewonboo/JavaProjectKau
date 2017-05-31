@@ -18,6 +18,8 @@ public class Novel {
 	
 	protected int Health;
 	
+	private int first=0;
+	
 	public Novel(){		
 	}
 	
@@ -46,7 +48,10 @@ public class Novel {
 	//학번에 따라 대사를 달리하게 하는 함
 	public int age_Condition(){	
 		if(ageNumber>=16){
-			System.out.printf("여어~ 귀여운 신.입.생 이쿤 ~^^* \n");
+			if(first==0){
+				System.out.printf("여어~ 귀여운 신.입.생 이쿤 ~^^* \n");
+				first++;
+			}
 			return 2;
 		}			
 		else if(13<=ageNumber && ageNumber>=15){

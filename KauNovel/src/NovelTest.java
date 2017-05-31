@@ -32,6 +32,11 @@ public class NovelTest {
 		//해쉬맵이란것을 이용해 미연시 대화를 이어갈수 있게 만든다
 		//링크더리스트는 불가 ㅜㅜ 
 		//git check
+		HashMap<String, String> map= new HashMap<String, String>();
+		//프라이베잇 대사 해쉬맵으로 생성해본다.
+		map.put("#1", "#1나: \n1. 신입생이 후딱후딱 인사안해?? \n2. 도를 믿으십니까? \n3. 저기 이름이 뭐니..?");
+		//#1의 1번 꼰대캐릭터.
+		map.put("#1-1", "#1-1나: \n1. FM~~ FM FM~~ FM 에프엠 어이! 에프엠 어이! \n2. CM~~ CM CM~~ CM 씨이엠 어이! 씨이엠 어이! \n3. 이름이 뭐냐!");
 		
 		if(choicePL==1){	
 			while(true){
@@ -46,7 +51,8 @@ public class NovelTest {
 				if(answer==1){
 					p("나: 저.. 저 .. 저기 !");
 					p("낯선 그녀: 네? ");
-					System.out.printf("소프트웨어학과 17학번 신입생 %s 와 눈을 마주쳤다.", girlchar1.privatechar);
+					System.out.printf("소프트웨어학과 17학번 신입생 %s 와 눈을 마주쳤다.\n", girlchar1.privatechar);
+					System.out.println();
 					if(me.age_Condition()==4){
 						//화석 학번일때 게임오버 
 						p("나: 17학번...???????");
@@ -59,10 +65,38 @@ public class NovelTest {
 					else{
 						//대사 1, 2, 3 이렇게 3개 입력 3개중 하나 선택 num==1
 						//node->data 에 num1값 입력 
-						
+						p("나: 저..저...저기 !");
+						p("프라이베잇: 무슨일이시죠 ?");
+						p(map.get("#1"));
+						answer=scan.nextInt();
+						if(answer==1){
+							p("프라이베잇: 아네~~ 안녕하세요ㅡ.");
+							p(map.get("#1-1"));
+							answer=scan.nextInt();
+							if(answer==1){
+								p("프라이베잇: 너 뭐하는사람이야! 아는척 지 말아주세요.");
+							}
+						}
 					}
 				}
 			}
 		}
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
