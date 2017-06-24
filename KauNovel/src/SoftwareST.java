@@ -23,7 +23,4 @@ public class SoftwareST {
 		privatechar=name2;
 		nickname2=goddness2;
 	}
-	
-	
-	
 }
