@@ -63,7 +63,17 @@ public class GameActivity extends AppCompatActivity {
             hide();
             choiceButton.setText(sceneData.GetScene("#3-1").text);
         }
+        if(debug==2){
+            currentScene="#b-1-1";
+        }
+        if (currentScene.equals("#b-1-1")){
+            num-=1;
+            hide();
+            choiceButton.setText(sceneData.GetScene("#b-1-1").text);
+        }
+
         debug+=1;
+
     }
 
     @OnClick(R.id.select_button2)
@@ -84,6 +94,15 @@ public class GameActivity extends AppCompatActivity {
             hide();
             choiceButton.setText(sceneData.GetScene("#6-1").text);
         }
+        if(debug==2){
+            currentScene="#b-2-1";
+        }
+        if (currentScene.equals("#b-2-1")){
+            num-=1;
+            hide();
+            choiceButton.setText(sceneData.GetScene("#b-2-1").text);
+        }
+
         debug+=1;
     }
 
@@ -105,6 +124,15 @@ public class GameActivity extends AppCompatActivity {
             hide();
             choiceButton.setText(sceneData.GetScene("#5-1").text);
         }
+        if(debug==2){
+            currentScene="#b-3-1";
+        }
+        if (currentScene.equals("#b-3-1")){
+            num-=1;
+            hide();
+            choiceButton.setText(sceneData.GetScene("#b-3-1").text);
+        }
+
         debug+=1;
     }
 
@@ -491,7 +519,56 @@ public class GameActivity extends AppCompatActivity {
         }
         else if (currentScene.equals("#a-13")){
             choiceButton.setText(sceneData.GetScene("#a-13").text);
+            currentScene ="#a-14";
         }
+        else if (currentScene.equals("#a-14")){
+            show();
+            selectButton1.setText(sceneData.GetScene("#b-1").text);
+            selectButton2.setText(sceneData.GetScene("#b-2").text);
+            selectButton3.setText(sceneData.GetScene("#b-3").text);
+        }
+        else if (currentScene.equals("#b-1-1")){
+            choiceButton.setText(sceneData.GetScene("#b-1-1").text);
+            currentScene ="#b-1-2";
+        }
+        else if (currentScene.equals("#b-1-2")){
+            choiceButton.setText(sceneData.GetScene("#b-1-2").text);
+        }
+        else if (currentScene.equals("#b-3-1")){
+            choiceButton.setText(sceneData.GetScene("#b-3-1").text);
+            currentScene ="#b-3-2";
+        }
+        else if (currentScene.equals("#b-3-2")){
+            choiceButton.setText(sceneData.GetScene("#b-3-2").text);
+        }
+        else if (currentScene.equals("#b-2-1")){
+            choiceButton.setText(sceneData.GetScene("#b-2-1").text);
+            currentScene ="#b-4";
+        }
+        else if (currentScene.equals("#b-4")){
+            choiceButton.setText(sceneData.GetScene("#b-4").text);
+            currentScene ="#b-5";
+        }
+        else if (currentScene.equals("#b-5")){
+            choiceButton.setText(sceneData.GetScene("#b-5").text);
+            currentScene ="#b-6";
+        }
+        else if (currentScene.equals("#b-6")){
+            choiceButton.setText(sceneData.GetScene("#b-6").text);
+            currentScene ="#b-7";
+        }
+        else if (currentScene.equals("#b-7")){
+            choiceButton.setText(sceneData.GetScene("#b-7").text);
+            currentScene ="#b-8";
+        }
+        else if (currentScene.equals("#b-8")){
+            show();
+            selectButton1.setText(sceneData.GetScene("#c-1").text);
+            selectButton2.setText(sceneData.GetScene("#c-2").text);
+            selectButton3.setText(sceneData.GetScene("#c-3").text);
+        }
+
+
 
         Scene scene = sceneData.GetScene(currentScene);
         choiceButton.setText(scene.text);
@@ -843,7 +920,77 @@ public class GameActivity extends AppCompatActivity {
         sceneData.CreateScene("#a-13", new Scene("17 신입생 : 뭐게용~",
                 ContextCompat.getDrawable(getApplicationContext(), R.drawable.new1),
                 ContextCompat.getDrawable(getApplicationContext(), R.drawable.new1)));
+        sceneData.CreateScene("#a-14", new Scene("선택하기.",
+                ContextCompat.getDrawable(getApplicationContext(), R.drawable.new1),
+                ContextCompat.getDrawable(getApplicationContext(), R.drawable.new1)));
 
+        //신입생 선택지-------------------------
+        //-----------------------------------
+
+        sceneData.CreateScene("#b-1", new Scene("1. fm fm fm fm fm어이! fm 어이",
+                ContextCompat.getDrawable(getApplicationContext(), R.drawable.new1),
+                ContextCompat.getDrawable(getApplicationContext(), R.drawable.new1)));
+        sceneData.CreateScene("#b-2", new Scene("2. 음.. 혹시 using namespace?",
+                ContextCompat.getDrawable(getApplicationContext(), R.drawable.new1),
+                ContextCompat.getDrawable(getApplicationContext(), R.drawable.new1)));
+        sceneData.CreateScene("#b-3", new Scene("3. 뀨 >< 모르겠쟝! ><",
+                ContextCompat.getDrawable(getApplicationContext(), R.drawable.new1),
+                ContextCompat.getDrawable(getApplicationContext(), R.drawable.new1)));
+
+        sceneData.CreateScene("#b-1-1", new Scene("안녕 안녕 안녕하십니까!... 창피해요..",
+                ContextCompat.getDrawable(getApplicationContext(), R.drawable.new1),
+                ContextCompat.getDrawable(getApplicationContext(), R.drawable.new1)));
+        sceneData.CreateScene("#b-1-2", new Scene("GAME OVER.....",
+                ContextCompat.getDrawable(getApplicationContext(), R.drawable.new1),
+                ContextCompat.getDrawable(getApplicationContext(), R.drawable.new1)));
+
+        sceneData.CreateScene("#b-2-1", new Scene("17 신입생 : (꺄륵) 어! 연관성이 있어요 ^^",
+                ContextCompat.getDrawable(getApplicationContext(), R.drawable.new1),
+                ContextCompat.getDrawable(getApplicationContext(), R.drawable.new1)));
+
+        sceneData.CreateScene("#b-3-1", new Scene("17 신입생 : 화석이 애교를 극혐!",
+                ContextCompat.getDrawable(getApplicationContext(), R.drawable.new1),
+                ContextCompat.getDrawable(getApplicationContext(), R.drawable.new1)));
+        sceneData.CreateScene("#b-3-2", new Scene("GAME OVER......",
+                ContextCompat.getDrawable(getApplicationContext(), R.drawable.new1),
+                ContextCompat.getDrawable(getApplicationContext(), R.drawable.new1)));
+        //b-2-1 선택시 대사 만들기!
+        sceneData.CreateScene("#b-4", new Scene("제어자 : 전 소학 신입생 제어자 라고 해요 ^^",
+                ContextCompat.getDrawable(getApplicationContext(), R.drawable.new1),
+                ContextCompat.getDrawable(getApplicationContext(), R.drawable.new1)));
+        sceneData.CreateScene("#b-5", new Scene("나 : 아하! 어자 정말 이쁜 이름이다 ^^",
+                ContextCompat.getDrawable(getApplicationContext(), R.drawable.new1),
+                ContextCompat.getDrawable(getApplicationContext(), R.drawable.new1)));
+        sceneData.CreateScene("#b-6", new Scene("제어자 : 아 진짜요 ??",
+                ContextCompat.getDrawable(getApplicationContext(), R.drawable.new1),
+                ContextCompat.getDrawable(getApplicationContext(), R.drawable.new1)));
+        sceneData.CreateScene("#b-7", new Scene("제어자 : 오빠는 이성 취향이 어떻게 되요??",
+                ContextCompat.getDrawable(getApplicationContext(), R.drawable.new1),
+                ContextCompat.getDrawable(getApplicationContext(), R.drawable.new1)));
+        sceneData.CreateScene("#b-8", new Scene("선택 하기",
+                ContextCompat.getDrawable(getApplicationContext(), R.drawable.new1),
+                ContextCompat.getDrawable(getApplicationContext(), R.drawable.new1)));
+
+
+        sceneData.CreateScene("#c-1", new Scene("1. 난 객체 지향이야 ^^*",
+                ContextCompat.getDrawable(getApplicationContext(), R.drawable.new1),
+                ContextCompat.getDrawable(getApplicationContext(), R.drawable.new1)));
+        sceneData.CreateScene("#c-2", new Scene("2. 난 절차 지향이야 ^^*",
+                ContextCompat.getDrawable(getApplicationContext(), R.drawable.new1),
+                ContextCompat.getDrawable(getApplicationContext(), R.drawable.new1)));
+        sceneData.CreateScene("#c-3", new Scene("3. 난 하드웨어같은 여자를 좋아해 ^^*",
+                ContextCompat.getDrawable(getApplicationContext(), R.drawable.new1),
+                ContextCompat.getDrawable(getApplicationContext(), R.drawable.new1)));
+
+        sceneData.CreateScene("#c-2-1", new Scene("제어자 : 으으... 화석답게 옛날 언어쓰시네",
+                ContextCompat.getDrawable(getApplicationContext(), R.drawable.new1),
+                ContextCompat.getDrawable(getApplicationContext(), R.drawable.new1)));
+        sceneData.CreateScene("#c-2-2", new Scene("제어자 : 아는척 하지 말아주세요",
+                ContextCompat.getDrawable(getApplicationContext(), R.drawable.new1),
+                ContextCompat.getDrawable(getApplicationContext(), R.drawable.new1)));
+        sceneData.CreateScene("#c-2-1", new Scene("GAME OVER...",
+                ContextCompat.getDrawable(getApplicationContext(), R.drawable.new1),
+                ContextCompat.getDrawable(getApplicationContext(), R.drawable.new1)));
 
         //3-5 슈레딩거 고양이 1번선택지 축복없을 경우 선택시
         sceneData.CreateScene("#0-0", new Scene("축복을 받지 못해 신입생에게 말걸 용기가 사라졌다.",
